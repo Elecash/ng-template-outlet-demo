@@ -1,0 +1,28 @@
+<h1>Angular Latam today is presented by:</h1>
+
+<app-user-card [user]="host1">
+    <ng-template let-user="user">
+        <div class="presenter">
+            <img [src]="user.photo">
+            <span>{{ user.name }}</span>
+        </div>
+    </ng-template>
+</app-user-card>
+
+<app-user-card [user]="host2">
+    <ng-template let-user="user">
+        <div class="presenter">
+            <img [src]="user.photo">
+            <span>{{ user.name }}</span>
+        </div>
+    </ng-template>
+</app-user-card>
+
+<app-user-card [user]="guest">
+    <ng-template let-user="user">
+        <div>
+            <h1>Special Guest: {{ user.name }}</h1>
+            <img [src]="user.photo">
+        </div>
+    </ng-template>
+</app-user-card>
